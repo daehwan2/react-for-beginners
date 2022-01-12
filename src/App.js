@@ -9,10 +9,10 @@ function App() {
     <Router>
       <Routes>
         <Route
-          path={`${process.PUBLIC_URL}/movie/:id`}
+          path={`${process.env.PUBLIC_URL}/movie/:id`}
           element={<Detail />}
         ></Route>
-        <Route path={`${process.PUBLIC_URL}/`} element={<Home />}></Route>
+        <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />}></Route>
       </Routes>
     </Router>
   );
