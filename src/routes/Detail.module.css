@@ -1,0 +1,68 @@
+.loadingContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading {
+  font-size: large;
+  font-weight: 800;
+}
+.home {
+  display: block;
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+  background-color: black;
+}
+.home_text {
+  color: white;
+  text-decoration: none;
+  transition: color 200ms ease-in-out;
+}
+.home_text:hover {
+  color: dodgerblue;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container2 {
+  padding: 10px;
+}
+.title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.rating {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+.runtime {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .title {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  .rating,
+  .runtime {
+    font-size: 40px;
+  }
+
+  .runtime {
+    margin-bottom: 40px;
+  }
+  .description {
+    font-size: 18px;
+  }
+}

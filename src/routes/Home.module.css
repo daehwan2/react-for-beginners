@@ -1,0 +1,56 @@
+.container {
+  background-color: darkslategray;
+}
+.home {
+  display: block;
+  position: relative;
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+  background-color: black;
+}
+
+.home_text {
+  color: white;
+  text-decoration: none;
+  transition: color 200ms ease-in-out;
+}
+.home_text:hover {
+  color: dodgerblue;
+}
+.loadingContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading {
+  font-size: large;
+  font-weight: 800;
+}
+.select_container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+
+  display: flex;
+  align-items: center;
+}
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  background-color: black;
+  color: white;
+  border: none;
+  height: 24px;
+  font-size: 18px;
+}
+.star,
+.arrow {
+  font-size: 18px;
+  color: yellow;
+  transform: translateY(-15%);
+}
