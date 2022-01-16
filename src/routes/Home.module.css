@@ -14,6 +14,7 @@
   color: white;
   text-decoration: none;
   transition: color 200ms ease-in-out;
+  z-index: 100;
 }
 .home_text:hover {
   color: dodgerblue;
@@ -37,16 +38,48 @@
   display: flex;
   align-items: center;
 }
+.select_container2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+
+  display: flex;
+  align-items: center;
+}
+.solt {
+  font-size: 12px;
+  color: white;
+  background-color: black;
+}
 .select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: none;
+  height: 24px;
+  font-size: 12px;
+  transition: color 200ms ease-in-out;
+}
+.select2 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
 
+  text-align: center;
   background-color: black;
   color: white;
   border: none;
   height: 24px;
   font-size: 18px;
+  transition: color 200ms ease-in-out;
+}
+.select:hover {
+  color: dodgerblue;
 }
 .star,
 .arrow {

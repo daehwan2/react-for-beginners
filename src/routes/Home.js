@@ -6,10 +6,11 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const [rating, setRating] = useState(9.0);
+  const [sortby, setSortby] = useState("year");
   const getMovies = async () => {
     const json = await (
       await fetch(
-        `https://yts.mx/api/v2/list_movies.json?minimum_rating=${rating}&sort_by=year`
+        `https://yts.mx/api/v2/list_movies.json?minimum_rating=${rating}&sort_by=${sortby}`
       )
     ).json();
     setMovies(json.data.movies);
@@ -17,7 +18,7 @@ function Home() {
   };
   useEffect(() => {
     getMovies();
-  }, [rating]);
+  }, [rating, sortby]);
   console.log(movies);
   return (
     <div>
@@ -28,38 +29,67 @@ function Home() {
         <div className={styles.select_container}>
           <div className={styles.star}>★</div>
           <select
-            className={styles.select}
+            className={styles.select2}
             onChange={(e) => {
               setLoading(true);
               setRating(Number(e.target.value));
             }}
           >
-            <option key="9.5" value="9.5">
-              9.5
-            </option>
             <option key="9.0" value="9.0">
               9.0
-            </option>
-            <option key="8.5" value="8.5">
-              8.5
             </option>
             <option key="8.0" value="8.0">
               8.0
             </option>
-            <option key="7.5" value="7.5">
-              7.5
-            </option>
             <option key="7.0" value="7.0">
               7.0
-            </option>
-            <option key="6.5" value="6.5">
-              6.5
             </option>
             <option key="6.0" value="6.0">
               6.0
             </option>
+            <option key="5.0" value="5.0">
+              5.0
+            </option>
+            <option key="4.0" value="4.0">
+              4.0
+            </option>
+            <option key="3.0" value="3.0">
+              3.0
+            </option>
+            <option key="2.0" value="2.0">
+              2.0
+            </option>
+            <option key="1.0" value="1.0">
+              1.0
+            </option>
           </select>
           <div className={styles.arrow}>↑</div>
+        </div>
+        <div className={styles.select_container2}>
+          <div className={styles.solt}>SoltBy: </div>
+          <select
+            className={styles.select}
+            onChange={(e) => {
+              setLoading(true);
+              setSortby(e.target.value);
+            }}
+          >
+            <option key="year" value="year">
+              year
+            </option>
+            <option key="title" value="title">
+              title
+            </option>
+            <option key="rating" value="rating">
+              rating
+            </option>
+            <option key="download_count" value="download_count">
+              download_count
+            </option>
+            <option key="like_count" value="like_count">
+              like_count
+            </option>
+          </select>
         </div>
       </div>
 
