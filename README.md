@@ -5,7 +5,7 @@ yts.mx의 openAPI 를 이용하여 영화리스트를 볼 수 있는 사이트�
 
 ## 결과물 URL
 
-https://daehwan2.github.io/react-for-beginners](https://daehwan2.github.io/react-for-beginners)
+https://daehwan2.github.io/react-for-beginners
 
 
 ## 스크린샷
